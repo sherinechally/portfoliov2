@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Overprint — Festival of Collaborative Making',
-  description: 'Two days in Lisbon for designers, engineers, printers, and writers making their best work together.',
+  title: 'Sherine Chally — Software Engineer',
+  description: 'Software engineer specializing in scalable backend architectures and secure AI systems. UCLA M.Eng. Data Science and 3.5 years at Morgan Stanley.',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -1,6 +1,6 @@
-import OverprintSwarmTemplate from '@/components/ui/overprint-swarm-template'
+import ResumePortfolio from '@/components/resume-portfolio'
 
 export default function Page() {
-  return <OverprintSwarmTemplate />
+  return <ResumePortfolio />
 }
 
