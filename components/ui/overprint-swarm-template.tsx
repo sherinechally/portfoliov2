@@ -177,7 +177,7 @@ export default function OverprintSwarmTemplate() {
         </section>
       </div>
 
-      <section className="identity-strip" aria-label="Collaborator disciplines"><span className="eyebrow">A COLLABORATIVE CANVAS</span>{collaborators.map((person) => <span key={person.name} className="identity-item"><i style={{ background: person.color }} />{person.name}<small>{person.task}</small></span>)}<button className="quiet-button" onClick={startTour}><Play size={13} /> Guided tour</button><button className="quiet-button" onClick={() => setQuickView((value) => !value)}><Sparkles size={13} /> {quickView ? 'Full experience' : 'Recruiter view'}</button><button className="quiet-button" onClick={replayBuild}><RotateCcw size={13} /> Replay build</button></section>
+      <section className="identity-strip" aria-label="Collaborator disciplines"><span className="eyebrow">A COLLABORATIVE CANVAS</span>{collaborators.map((person) => <span key={person.name} className="identity-item"><i style={{ background: person.color }} />{person.name}<small>{person.task}</small></span>)}<button className="quiet-button" onClick={startTour}><Play size={13} /> Guided tour</button><button className="quiet-button" aria-pressed={quickView} onClick={() => setQuickView((value) => !value)}><Sparkles size={13} /> {quickView ? 'Full experience' : 'Recruiter view'}</button><button className="quiet-button" onClick={replayBuild}><RotateCcw size={13} /> Replay build</button></section>
 
       <section className="portfolio-section about-section" id="about" aria-labelledby="about-title">
         <i className="section-rule" aria-hidden="true" /><SectionHeading index="01" label="THE ENGINEER" title="I build systems that are scalable, intelligent, and trustworthy." id="about-title" />
