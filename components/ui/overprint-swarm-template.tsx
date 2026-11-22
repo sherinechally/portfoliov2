@@ -70,7 +70,7 @@ export default function OverprintSwarmTemplate() {
       const bluePlate = root.querySelector<HTMLElement>('.title-blue')
       const pinkPlate = root.querySelector<HTMLElement>('.title-pink')
       const glyphs = [...root.querySelectorAll<HTMLElement>('.title-blue .hero-glyph')]
-      const cursor = root.querySelector<HTMLElement>('.overprint-cursor')
+      const cursors = [...root.querySelectorAll<HTMLElement>('.collab-cursor')]
       if (hero && title && bluePlate && pinkPlate) {
       gsap.fromTo(glyphs, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.18, stagger: 0.025, ease: 'power2.out', delay: 0.2 })
       const loadingMessage = root.querySelector<HTMLElement>('.loading-message')
@@ -89,19 +89,14 @@ export default function OverprintSwarmTemplate() {
         .fromTo(title, { scale: 0.88, y: 34 }, { scale: 1, y: 0, ease: 'none' }, 0)
         .fromTo(pinkPlate, { x: 0, y: 0 }, { x: 7, y: 5, ease: 'none' }, 0.15)
         .fromTo(bluePlate, { x: 0, y: 0 }, { x: -2, y: -2, ease: 'none' }, 0.15)
-      if (cursor) {
-        gsap.fromTo(cursor, { x: 0, y: 0, rotate: -8 }, {
-          x: '12vw', y: '8vh', rotate: 4,
-          scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom bottom', scrub: 0.7 },
+      cursors.forEach((cursor, index) => {
+          const phase = index / Math.max(1, cursors.length - 1)
+          gsap.fromTo(cursor, { x: `${(index % 2 ? 15 : -15)}vw`, y: `${(index - 2) * 44}px`, rotate: -8 + index * 2 }, {
+            x: `${(phase * 60 - 30)}vw`, y: `${((index % 3) - 1) * 78}px`, rotate: 0,
+            scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom bottom', scrub: 0.7 },
+          })
         })
       }
-      }
-      root.querySelectorAll<HTMLElement>('.section-heading h2, .about-copy p, .closing-copy').forEach((element) => {
-        gsap.fromTo(element, { y: 22, opacity: 0 }, {
-          y: 0, opacity: 1, ease: 'none',
-          scrollTrigger: { trigger: element, start: 'top 92%', end: 'top 68%', scrub: 0.5 },
-        })
-      })
       root.querySelectorAll<HTMLElement>('[data-assemble]').forEach((element) => {
         gsap.fromTo(element, { y: 36, opacity: 0, scale: 0.96, rotate: Number(element.dataset.tilt ?? 0) }, {
           y: 0, opacity: 1, scale: 1, rotate: 0, ease: 'power2.out',
@@ -177,7 +172,7 @@ export default function OverprintSwarmTemplate() {
           </div>
           <div className="hero-colophon"><span>INDEPENDENT SYSTEMS THINKING</span><span>LOS ANGELES, CA · 2026</span><span className="loader-label"><i /> initializing_portfolio.tsx</span></div>
           <div className="loading-panel" aria-hidden="true"><span className="loading-count">01 / 05</span><div className="loading-line"><i /></div><span className="loading-message">Initializing workspace…</span></div>
-          <div className="cursor-layer" aria-hidden="true"><div className="overprint-cursor"><i /><span>OVERPRINT</span></div></div>
+          <div className="cursor-layer" aria-hidden="true">{collaborators.map((person, index) => <div className="collab-cursor" key={person.name} style={{ '--cursor': person.color, '--delay': `${index * -0.4}s` } as React.CSSProperties}><i /><span>{person.name}</span></div>)}</div>
           <a href="#about" className="scroll-note"><span>SCROLL TO EXPLORE</span><ArrowDown size={14} /></a>
         </section>
       </div>
