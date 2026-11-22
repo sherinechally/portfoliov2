@@ -13,7 +13,7 @@ const experience = [
   },
   {
     role: 'Tech Fellow',
-    company: 'Youth for Responsible AI',
+    company: 'Youth for Responsible AI (Y4RAI)',
     dates: 'Jul 2026 — Sep 2026',
     bullets: [
       'Built the AI Incident Tracker dashboard for the Tooling Track, cataloging incidents by youth impact, risk area, region, and policy safeguard.',
@@ -26,7 +26,7 @@ const experience = [
     company: 'Morgan Stanley',
     dates: 'Jan 2024 — Jul 2025',
     bullets: [
-      'Migrated 30+ legacy mainframe jobs and 24 input feeds to a scalable distributed architecture using APIs and message queues, enabling new Prime Brokerage functionality measured by Liquidity Coverage Ratio.',
+      'Migrated 30+ legacy mainframe jobs and 24 input feeds to a scalable distributed architecture using APIs and message queues, enabling new Prime Brokerage functionality as measured by Liquidity Coverage Ratio (LCR).',
       'Independently replaced Kerberos with mTLS on an internal PostgreSQL database to meet secure data-transmission compliance requirements.',
     ],
     tags: ['Java', 'APIs', 'Message queues', 'PostgreSQL'],
@@ -54,14 +54,14 @@ const projects = [
   {
     name: 'Reflective Hybrid RAG for Recommendation',
     dates: 'Sep 2025 — Dec 2025',
-    description: 'Combined Dense + SPLADE retrieval with a reflection layer for recommendation.',
+    description: 'Built Dense + SPLADE retrieval with a reflection layer, tripling Hit Rate@1 on the Agent Society Goodreads benchmark.',
     result: '3× Hit Rate@1',
     detail: '12.5% → 37.5% on the Agent Society Goodreads benchmark',
     href: 'https://github.com/sherinechally/ReflectiveHybridRAGforRecommendation',
     code: 'github.com/sherinechally/ReflectiveHybridRAGforRecommendation',
   },
   {
-    name: 'Quant-Aware Speculative Action Chunking',
+    name: 'Quant-Aware Speculative Action Chunking (VLA)',
     dates: 'Apr 2026 — Jun 2026',
     description: 'Improved point-cloud diffusion-policy inference with overlap chunking and INT8 quantization.',
     result: '5.58× speedup',
