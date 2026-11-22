@@ -162,12 +162,24 @@ export default function OverprintSwarmTemplate() {
                 <a href={resumeHref} download="Sherine-Chally-Resume.txt" className="text-button">View résumé <ArrowUpRight size={15} /></a>
               </div>
             </div>
-            <div className="system-art" role="img" aria-label="A layered systems diagram illustrating engineering, artificial intelligence, and security">
-              <div className="art-registration" />
-              <div className="art-orbit orbit-a" /><div className="art-orbit orbit-b" />
-              <div className="art-core"><span>INTELLIGENCE</span><b>↗</b><span>WITH INTENT</span></div>
-              <div className="art-node node-one">SYSTEMS<br /><b>01</b></div><div className="art-node node-two">MODEL<br /><b>02</b></div><div className="art-node node-three">TRUST<br /><b>03</b></div>
-              <span className="art-caption">FIG. 01 / A STUDY IN SYSTEMS</span>
+            <div className="system-art" role="img" aria-label="Overlapping pink and blue halftone circles with the words Intelligence, with intent">
+              <svg className="art-print" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
+                <defs>
+                  <pattern id="hero-pink-dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2.2" fill="#FF5CBC" /></pattern>
+                  <pattern id="hero-blue-dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2.2" fill="#3B96FF" /></pattern>
+                  <path id="hero-ring-top" d="M 52 220 A 168 168 0 0 1 388 220" />
+                  <path id="hero-ring-bottom" d="M 388 220 A 168 168 0 0 1 52 220" />
+                </defs>
+                <circle cx="178" cy="178" r="151" fill="url(#hero-pink-dots)" />
+                <circle cx="262" cy="262" r="151" fill="url(#hero-blue-dots)" />
+                <circle className="art-circle art-circle-pink" cx="178" cy="178" r="108" />
+                <circle className="art-circle art-circle-blue" cx="262" cy="262" r="108" />
+                <text className="art-ring"><textPath href="#hero-ring-top" startOffset="50%" textAnchor="middle">SOFTWARE · INTELLIGENCE · RESPONSIBLE AI ·</textPath></text>
+                <text className="art-ring"><textPath href="#hero-ring-bottom" startOffset="50%" textAnchor="middle">BUILD FOR PEOPLE · VERIFY THE SYSTEM ·</textPath></text>
+                <text className="art-core-label" x="220" y="207">INTELLIGENCE</text>
+                <text className="art-core-arrow" x="220" y="241">↗</text>
+                <text className="art-core-subtitle" x="220" y="264">WITH INTENT</text>
+              </svg>
             </div>
           </div>
           <div className="hero-colophon"><span>INDEPENDENT SYSTEMS THINKING</span><span>LOS ANGELES, CA · 2026</span><span className="loader-label"><i /> initializing_portfolio.tsx</span></div>
