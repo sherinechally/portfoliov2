@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import gsap from 'gsap'
+import DottedTrailCursor from '@/components/ui/dotted-trail-cursor'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Check, Code2, Ellipsis, Network, Mail, MapPin, Play, RotateCcw, Sparkles } from 'lucide-react'
 import { portfolio, resumeText } from '@/lib/portfolio-data'
@@ -139,6 +140,18 @@ export default function OverprintSwarmTemplate() {
       <div className="paper-grain" aria-hidden="true" />
       <div className="hero-run" id="top">
         <section className="hero-stage" aria-labelledby="hero-title">
+          <DottedTrailCursor
+            className="hero-trail-cursor"
+            colorA="#ff5cbc"
+            colorB="#3b96ff"
+            backgroundColor="#111014"
+            dotColor="#38343d"
+            activeDotColor="#111014"
+            dotSpacing={28}
+            dotRadius={1}
+            headRadius={46}
+            glowRadius={180}
+          />
           <Mark />
           <header className="masthead">
             <a href="#top" className="brand">SHERINE CHALLY<span>®</span></a>
