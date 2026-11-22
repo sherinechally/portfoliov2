@@ -137,21 +137,21 @@ export default function OverprintSwarmTemplate() {
 
   return (
     <main ref={rootRef} className={`overprint-portfolio${quickView ? ' recruiter-view' : ''}`}>
+      <DottedTrailCursor
+        className="site-trail-cursor"
+        colorA="#ff5cbc"
+        colorB="#3b96ff"
+        backgroundColor="#000000"
+        dotColor="#38343d"
+        activeDotColor="#111014"
+        dotSpacing={34}
+        dotRadius={0.9}
+        headRadius={46}
+        glowRadius={180}
+      />
       <div className="paper-grain" aria-hidden="true" />
       <div className="hero-run" id="top">
         <section className="hero-stage" aria-labelledby="hero-title">
-          <DottedTrailCursor
-            className="hero-trail-cursor"
-            colorA="#ff5cbc"
-            colorB="#3b96ff"
-            backgroundColor="#111014"
-            dotColor="#38343d"
-            activeDotColor="#111014"
-            dotSpacing={28}
-            dotRadius={1}
-            headRadius={46}
-            glowRadius={180}
-          />
           <Mark />
           <header className="masthead">
             <a href="#top" className="brand">SHERINE CHALLY<span>®</span></a>
